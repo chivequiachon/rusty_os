@@ -147,7 +147,6 @@ impl fmt::Write for Writer {
 		}
 		Ok(())
 	}
-
 }
 
 
@@ -158,9 +157,9 @@ pub fn print_something() {
 		buffer: unsafe { Unique::new_unchecked(0xb8000 as *mut _) }
 	};
 
-	/*writer.write_str("Hello lower world!");*/
-	writer.write_byte(b'H');
-	writer.write_str("ello! ");
+	//writer.write_str("Hello lower world!");
+	//writer.write_byte(b'H');
+	//writer.write_str("ello! ");
 	write!(writer, "The numbers are {} and {}", 42, 1.0/3.0);
 }
 
